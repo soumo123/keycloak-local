@@ -1,0 +1,244 @@
+@media (min-width: 310px) and (max-width: 450px) {
+
+    .inpubutton1 {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+        /* width: auto !important; */
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    .inputbutton2 {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+        /* width: auto !important; */
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    div#kc-form {
+        width: auto !important;
+    }
+
+    .signinimage {
+        display: none !important;
+    }
+
+    .hide_lang {
+
+        margin-right: 88px;
+        width: 50%;
+        margin-top: 25px;
+    }
+
+    .login-pf-page {
+        padding-top: 0px !important;
+        position: relative !important;
+        bottom: 56px !important;
+    }
+
+    .signupoption {
+        left: 0% !important;
+        top: 22% !important;
+        right: 0% !important
+    }
+
+    .arrowlogo {
+        margin-left: 52px !important;
+    }
+
+    .signupname {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    .signuplastname {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    .signupemail {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    .signuppassword {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    .signupconfirm {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+
+        margin-right: 0 !important;
+        border: 1px solid #3f2783 !important;
+        box-shadow: none !important;
+    }
+
+    form#kc-register-form {
+        width: auto !important;
+    }
+
+    .inpubutton3 {
+        height: 50px !important;
+        border-radius: 10px !important;
+        margin-bottom: 20px !important;
+        width: 70% !important;
+        margin-left: 51px !important;
+        border: 1px solid #3f2783;
+        box-shadow: none !important;
+    }
+
+
+
+    .forgot_mob_btn {
+        width: 59% !important;
+        height: 50px !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        margin-top: 20px !important;
+        color: #fff !important;
+        background: #3F2783 !important;
+        border-radius: 8px !important;
+        border: 2px solid #3F2783 !important;
+        display: inline-block !important;
+        margin-left: 70px !important;
+    }
+
+    .mob_forgot_width {
+        width: 100% !important;
+    }
+
+    .updatepass {
+        width: 84% !important;
+
+    }
+
+    .updatepass1 {
+        width: 55% !important;
+
+    }
+
+    .radiobox {
+        margin-bottom: 20px;
+    }
+
+    .btn-home {
+        width: 55% !important;
+    }
+
+
+    /* .popup {
+        position: fixed !important;
+        top: 46% !important;
+        left: 50% !important;
+        right: -40% !important;
+        transform: translate(-50%, -50%) !important;
+        background-color: white !important;
+        padding: 20px !important;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+        z-index: 1000 !important;
+        width: 90% !important;
+    }
+
+
+    .clos-btn {
+        display: inline-block !important;
+        width: auto !important;
+        height: 44px !important;
+        border-radius: 8px !important;
+        background: #3F2783 !important;
+        border-radius: 8px !important;
+        border: 2px solid #3F2783 !important;
+        color: #fff !important;
+        border-radius: 10px !important
+    }
+
+    .oka-btn {
+        display: inline-block !important;
+        margin-top: 0px !important;
+        width: auto !important;
+        height: 44px !important;
+        border-radius: 8px !important;
+    }
+
+    .btn_custom1 {
+        transition: all linear 0.3s !important;
+        -webkit-transition: all linear 0.3s !important;
+        -moz-transition: all linear 0.3s !important;
+        -ms-transition: all linear 0.3s !important;
+        -o-transition: all linear 0.3s !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .btn_custom1:hover {
+        background-color: #fff !important;
+        color: #42bb2a !important;
+    }
+
+    .popup-email {
+        font-size: 15px !important;
+    } */
+
+}
+
+
+/* @media (min-width: 768px) and (max-width: 1180px) {
+
+    .popup {
+        display: none !important;
+        position: fixed !important;
+        top: 48% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background-color: white !important; 
+        padding: 20px !important;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) !important;
+        z-index: 1000 !important;
+        width: 64% !important;
+    }
+
+    .signinimage {
+        display: none !important;
+    }
+
+    .hide_lang {
+        margin-top: -32px !important;
+        text-align: center !important;
+        margin-right: 40px !important;
+        width: 126px !important;
+        float: right !important;
+        border-radius: 11px !important;
+        border: 2px solid #4d2a91 !important;
+        padding: 5px 7px 5px 9px !important;
+        cursor: pointer !important;
+    }
+
+
+} */

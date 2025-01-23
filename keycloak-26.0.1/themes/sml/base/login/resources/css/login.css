@@ -1,0 +1,28 @@
+/* h1#kc-page-title {
+    margin-top: 10px;
+    background-color: #0066CC;
+} */
+
+
+kc-logo-text {
+    background-image: url(../img/sometric-Smartphone.png);
+    
+}
+
+
+.login-pf body {
+    background: url("../img/sometric-Smartphone.png");
+    background-size: cover;
+}
+
+
+
+.patient-signin-img {
+    background: url(../img/sometric-Smartphone.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    background-position: bottom right;
+    background-color: #eaeaea;
+}

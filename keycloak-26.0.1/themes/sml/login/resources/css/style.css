@@ -1,0 +1,349 @@
+/* h1#kc-page-title {
+    margin-top: 10px;
+} */
+
+/* 
+.login-pf body {
+    background: url("../img/sometric-Smartphone.png");
+    background-size: cover;
+} */
+
+
+
+.card-pf{
+    margin-top: 10px;
+}
+input:focus {
+    border: 1px solid #3f2783;
+  }
+
+
+.place::placeholder {
+    font-style: normal;
+    font-size: 15px;
+    color: #3f2783;
+    font-family: inherit;
+  }
+
+.place:focus-visible {
+    outline: 0px solid #3f2783;
+}
+
+
+
+
+.btn_custom{
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    font-family: 'Poppins', sans-serif !important;
+}  
+.btn_custom:hover{
+    background-color: #fff !important;
+    color: #3f2783 !important;
+}
+
+
+.btn_custom1{
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    font-family: 'Poppins', sans-serif !important;
+}  
+.btn_custom1:hover{
+    background-color: #fff !important;
+    color:#42bb2a!important;
+}
+
+
+
+
+
+
+a.pf-c-dropdown__menu-item:hover {
+    background-color: #ECE9F3 !important;
+    color: #3F2783 !important;
+}
+a.pf-c-dropdown__menu-item {
+   
+    color: #3F2783 !important;
+}
+
+.hide_lang a {
+    text-decoration: none;
+}
+
+.hide_lang{
+    margin-top: -27px;
+    text-align: center;
+    margin-right: 94px;
+    width: 126px;
+    float: right;
+    border-radius: 11px;
+    border: 2px solid #4d2a91;
+    padding: 5px 7px 5px 9px;
+    cursor: pointer;
+}
+
+.text_color{
+    color: #3f2783 !important;
+}
+
+.terms-conditions{
+    width: 140px;
+    height: 40px;
+    background-color: #3f2783 !important;
+    border-radius: 13px;
+    
+}
+
+
+.terms-conditionssss{
+    width: 140px;
+    height: 40px;
+    border-radius: 13px;
+    margin: 15px;
+}
+
+.show_lang{
+    display: none;
+}
+.hide_lang:hover .show_lang{
+    display: block;
+}
+
+
+.terms{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+}
+
+
+
+
+.custom_check_box [type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+.custom_check_box [type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #3f2783;
+}
+.custom_check_box.large [type="checkbox"]+label {
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 25px;
+}
+.custom_check_box [type="checkbox"]+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(63, 39, 131, 0.7);
+    border-radius: 100%;
+    background: #fff;
+}
+.custom_check_box.large [type="checkbox"]+label:before {
+    width: 24px;
+    height: 24px;
+}
+.custom_check_box [type="checkbox"]:checked+label:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #3f2783;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.custom_check_box.tick [type="checkbox"]:checked+label:after {
+    background: url("${url.resourcesPath}/img/check.png") no-repeat;
+    background-color: #3f2783;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
+}
+.custom_check_box.disables [type="checkbox"]:checked+label:after {
+    background: url("${url.resourcesPath}/img/check.png") no-repeat;
+    background-color: #857f7f;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
+}
+.custom_check_box.tick.large [type="checkbox"]:checked+label:after {
+    width: 22px;
+    height: 22px;
+}
+.custom_check_box.disables.large [type="checkbox"]:checked+label:after {
+    width: 22px;
+    height: 22px;
+}
+
+
+.update-password-title{
+text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    margin-top: -5px;
+}
+
+.password-contaier{
+    text-align: center;
+    margin-top: -67px;
+}
+
+.title1{
+text-align: center;
+}
+
+.title2{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.title3{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    font-family: unset;
+}
+
+span#input-error-password {
+    position: absolute;
+    margin-top: 53px;
+    left: 42%;
+}
+.missing-message{
+    font-weight: 600;
+    font-size: 13px;
+    color: black;
+    margin-left:-106px
+}
+
+.span-error{
+    position: absolute;
+    margin-top: 56px;
+    left: 42%;
+}
+
+.proceed-color{
+    color: #fdfcff;
+    text-decoration: auto;
+    background-color: #3F2783;
+    font-size: 28px;
+    border-radius: 7px;
+}
+.proceed-color:hover{
+    color: #fdfcff;
+    text-decoration:auto
+}
+.error-title{
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+color: black;
+margin-top: 0px;
+/* margin-top: 96px; */
+}
+
+.instruction{
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #3F2783;
+}
+
+.instructionsss{
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 12px;
+    width: 180px;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #3F2783;
+}
+.instructionsss:hover{
+    text-align: center;
+    border: 2px solid #3F2783;
+    color: #3F2783;
+    padding: 10px;
+    border-radius: 12px;
+    width: 180px;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #fff;
+}
+#backToApplication {
+    color: #ffff;
+    text-decoration: auto;   
+    font-size: 14px;
+  }
+#backToApplication:hover{
+    color: #3F2783;
+  
+  }
+
+  .ins{
+    font-size: large;
+  }
+
+  /* .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 50%;
+} */
+
+/* 
+.clos-btn{
+    display: inline-block;
+    width: auto;
+    height: 44px;
+    border-radius: 8px;   
+    background: #3F2783;
+    border-radius: 8px;
+    border: 2px solid #3F2783;color: #fff;border-radius: 10px;
+    padding: 0 43px 0 35px;
+}
+
+.oka-btn{
+    display: inline-block;
+    margin-top: 0px;
+    width: auto;
+    height: 44px;
+    border-radius: 8px;   
+    background: #3F2783;
+    border-radius: 8px;
+    border: 2px solid #3F2783;color: #fff;border-radius: 10px;
+    padding: 0 43px 0 35px;
+} */
