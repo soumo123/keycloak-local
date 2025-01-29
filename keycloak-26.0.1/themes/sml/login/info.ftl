@@ -18,7 +18,7 @@
       }
    </style>
    <div class="container-fluid">
-   <div class="row">
+   <div class="row" style="background: #ffff !important;">
       <div class="col-md-7" style="margin-top:190px">
          <@layout.registrationLayout displayMessage=false; section>
          <#if section="header">
@@ -54,7 +54,7 @@
             </p>
             <#elseif actionUri?has_content>
             <div style="text-align: center; margin-top: -3%;">
-               <p class="confirmwidth" style="width: 29%;
+               <p class="confirmwidth" style="width: 200px;
                   text-align: center;
                   height: 50px;
                   border-radius: 10px;
@@ -72,7 +72,7 @@
             </div>
             <#elseif (client.baseUrl)?has_content>
             <p class="instructionsss"><a class="color:black" id="backToApplication" href="${client.baseUrl}">
-               ${kcSanitize(msg("backToApplication1"))?no_esc}
+               ${kcSanitize(msg("backToApplication1"))?no_esc} 
                </a>
             </p>
             </#if>
