@@ -467,26 +467,110 @@
         </div>
         </div>
         <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sendButton = document.getElementById("send-button");
-            const popup = document.getElementById("popup");
-            const closePopupBtn = document.getElementById("close-popup");
-            const clickHereButton = document.getElementById("click-here-button");
-            const emailInput = document.getElementById("email"); // Get the email input element
-            const popupEmail = document.getElementById("popup-email"); // Get the popup email display element
-            sendButton.addEventListener("click", function(e) {
-                e.preventDefault();
-                const emailValue = emailInput.value;
-                popupEmail.textContent = emailValue;
-                popup.style.display = "block";
+         
+         document.addEventListener("DOMContentLoaded", function() {
+    const sendButton = document.getElementById("send-button");
+    const popup = document.getElementById("popup");
+    const closePopupBtn = document.getElementById("close-popup");
+    const clickHereButton = document.getElementById("click-here-button");
+    const form = document.getElementById("kc-register-form");
+
+    if (!sendButton || !form) {
+        console.error("Error: Required elements not found!");
+        return;
+    }
+
+    const emailInput = document.getElementById("email");
+    const firstNameInput = document.getElementById("firstName");
+    const lastNameInput = document.getElementById("lastName");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("password-confirm");
+    const popupEmail = document.getElementById("popup-email");
+
+    const inputFields = [firstNameInput, lastNameInput, emailInput, passwordInput, confirmPasswordInput];
+
+    sendButton.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        if (!validateField(firstNameInput, "${msg("invalidUserMessage")?no_esc}")) isValid = false;
+        if (!validateField(lastNameInput, "${msg("invalidUserMessage")?no_esc}")) isValid = false;
+        if (!validateField(emailInput, "${msg("invalidEmailMessage")?no_esc}", validateEmail)) isValid = false;
+        if (!validateField(passwordInput, "${msg("invalidUserMessage")?no_esc}")) isValid = false;
+        if (!validatePasswords(passwordInput, confirmPasswordInput)) isValid = false;
+
+        if (isValid) {
+            popupEmail.textContent = emailInput.value;
+            popup.style.display = "block";
+        }
+    });
+
+    closePopupBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+
+    clickHereButton.addEventListener("click", function() {
+        form.submit();
+    });
+
+    function validateField(input, errorMessage, validator = null) {
+        if (!input) return false;
+        const value = input.value.trim();
+        let errorSpan = getErrorSpan(input);
+
+        if (!value || (validator && !validator(value))) {
+            errorSpan.textContent = errorMessage;
+            errorSpan.style.display = "block";
+            return false;
+        }
+        errorSpan.style.display = "none";
+        return true;
+    }
+
+    function validatePasswords(passwordInput, confirmPasswordInput) {
+        if (!passwordInput || !confirmPasswordInput) return false;
+        let errorSpan = getErrorSpan(confirmPasswordInput);
+
+        if (passwordInput.value.trim() !== confirmPasswordInput.value.trim()) {
+            errorSpan.textContent = "${msg("notMatchPasswordMessage")?no_esc}";
+            errorSpan.style.display = "block";
+            return false;
+        }
+        errorSpan.style.display = "none";
+        return true;
+    }
+
+    function getErrorSpan(input) {
+        let errorSpan = input.parentNode.querySelector(".error-message");
+        if (!errorSpan) {
+            errorSpan = document.createElement("span");
+            errorSpan.className = "error-message";
+            errorSpan.style.color = "red";
+            errorSpan.style.display = "none";
+            errorSpan.style.marginTop = "5px";
+            input.parentNode.appendChild(errorSpan);
+        }
+        return errorSpan;
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // **🆕 Add event listeners to remove error while typing**
+    inputFields.forEach(input => {
+        if (input) {
+            input.addEventListener("input", function() {
+                let errorSpan = getErrorSpan(input);
+                errorSpan.style.display = "none";
             });
-            closePopupBtn.addEventListener("click", function() {
-                // Hide the popup when the close button is clicked
-                popup.style.display = "none";
-            });
-            clickHereButton.addEventListener("click", function() {
-                document.getElementById("kc-register-form").submit();
-            });
-        });
+        }
+    });
+});
+
+
+
         </script>
     </body>

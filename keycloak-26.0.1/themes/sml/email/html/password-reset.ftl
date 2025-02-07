@@ -183,7 +183,7 @@
                                     ${msg("passwordBody4")}
                                 </p> -->
                                 <p>
-                                    ${msg("thanks")},</p>
+                                    ${msg("thanks")}</p>
                                 <p>
                                     ${msg("akunah_team")}
                                 </p>

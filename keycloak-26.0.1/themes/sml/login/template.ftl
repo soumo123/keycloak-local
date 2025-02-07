@@ -332,7 +332,7 @@ body {
                         </#if>
                     </header>
                     <div id="kc-content">
-                        <div id="kc-content-wrapper" style="margin-top: 66px">
+                        <div id="kc-content-wrapper" class="custom-des"style="margin-top: 66px">
                             <#-- App-initiated actions should not see warning messages about the need to complete the action -->
                                 <#-- during login. -->
                                     <#if displayMessage && message?has_content && (message.type !=' warning' || !isAppInitiatedAction??)>

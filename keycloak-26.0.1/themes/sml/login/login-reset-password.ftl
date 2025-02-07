@@ -312,23 +312,71 @@
         <!-- JavaScript code to handle the popup and form submission -->
         <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const sendButton = document.getElementById("send-button");
-            const popup = document.getElementById("popup");
-            const closePopupBtn = document.getElementById("close-popup");
-            const clickHereButton = document.getElementById("click-here-button");
-            sendButton.addEventListener("click", function(e) {
-                // Prevent the form submission
-                e.preventDefault();
-                // Show the popup when the button is clicked
-                popup.style.display = "block";
-            });
-            closePopupBtn.addEventListener("click", function() {
-                // Hide the popup when the close button is clicked
-                popup.style.display = "none";
-            });
-            clickHereButton.addEventListener("click", function() {
-                document.getElementById("kc-reset-password-form").submit();
-            });
-        });
+    const sendButton = document.getElementById("send-button");
+    const popup = document.getElementById("popup");
+    const closePopupBtn = document.getElementById("close-popup");
+    const clickHereButton = document.getElementById("click-here-button");
+    const emailInput = document.getElementById("username"); // Email input field
+    const form = document.getElementById("kc-reset-password-form");
+
+    if (!sendButton || !emailInput || !form) {
+        console.error("Error: Required elements not found!");
+        return;
+    }
+
+    sendButton.addEventListener("click", function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        // Validate email field before opening the popup
+        if (!validateEmailField(emailInput, "${msg("invalidUserMessage")?no_esc}")) {
+            return;
+        }
+
+        // If valid, open the popup
+        popup.style.display = "block";
+    });
+
+    closePopupBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+    });
+
+    clickHereButton.addEventListener("click", function() {
+        form.submit(); // Submit the form after confirming in the popup
+    });
+
+    function validateEmailField(input, errorMessage) {
+        let value = input.value.trim();
+        let errorSpan = getErrorSpan(input);
+
+        if (!value) {
+            errorSpan.textContent = errorMessage;
+            errorSpan.style.display = "block";
+            return false;
+        }
+
+        errorSpan.style.display = "none";
+        return true;
+    }
+
+    function getErrorSpan(input) {
+        let errorSpan = input.parentNode.querySelector(".error-message");
+        if (!errorSpan) {
+            errorSpan = document.createElement("span");
+            errorSpan.className = "error-message";
+            errorSpan.style.color = "red";
+            errorSpan.style.display = "none";
+            errorSpan.style.marginTop = "5px";
+            input.parentNode.appendChild(errorSpan);
+        }
+        return errorSpan;
+    }
+
+    // Remove error when typing
+    emailInput.addEventListener("input", function() {
+        let errorSpan = getErrorSpan(emailInput);
+        errorSpan.style.display = "none";
+    });
+});
+
         </script>
     </body>

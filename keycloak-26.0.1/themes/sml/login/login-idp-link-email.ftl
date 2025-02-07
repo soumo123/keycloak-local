@@ -1,14 +1,19 @@
 <#import "template.ftl" as layout>
 <body>
     <style>
-        
+        .signingoogle{
+            text-align: center;
+            font-size: 28px !important;
+            font-weight: 300;
+        }
     </style>
     <div class="container-fluid">
         <div class="row" style="background: #ffffff;">
             <div class="col-md-7" style="margin-top:133px">
                 <@layout.registrationLayout; section>
                 <#if section = "header">
-                    ${msg("emailLinkIdpTitle", idpDisplayName)}
+                    <!-- ${msg("emailLinkIdpTitle", idpDisplayName)} -->
+                     <h1 class="signingoogle">${msg("emailLinkIdpTitle")}</h1>
                 <#elseif section = "form">
                     <p id="instruction1" class="instruction">
                         ${msg("emailLinkIdp1", idpDisplayName, brokerContext.username, realm.displayName)}
